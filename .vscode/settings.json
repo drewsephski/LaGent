@@ -1,0 +1,8 @@
+‌    "chat.editor.fontSize": 10,​}
+    "codeium.aggressiveShutdown": false,
+    "codeium.enableSearch": true,
+    "codeium.enableSuggest": true,
+    "codeium.language": "en",
+    "codeium.maxItemCount": 3,
+    "codeium.minQueryLength": 1
+}

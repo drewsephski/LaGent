@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaGent: Revolutionary LLM-Based Agent Framework</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #0f172a, #1e293b);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero {
+            height: 100vh;
+            position: relative;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .glow {
+            text-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80, 0 0 30px #4ade80;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            color: #4ade80;
+        }
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed w-full z-50 bg-opacity-70 bg-gray-900 backdrop-filter backdrop-blur-lg">
+        <nav class="container mx-auto flex justify-between items-center p-6">
+            <div class="text-2xl font-semibold text-green-400">
+                <i class="fas fa-robot mr-2"></i>LaGent
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="#features" class="hover:text-green-400 transition duration-300">Features</a></li>
+                <li><a href="#advantages" class="hover:text-green-400 transition duration-300">Advantages</a></li>
+                <li><a href="#getting-started" class="hover:text-green-400 transition duration-300">Getting Started</a></li>
+                <li><a href="#customization" class="hover:text-green-400 transition duration-300">Customization</a></li>
+                <li><a href="#community" class="hover:text-green-400 transition duration-300">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero flex items-center justify-center text-white text-center">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 class="text-6xl font-bold mb-4 glow">LaGent: Revolutionizing LLM Technology</h1>
+            <p class="mt-4 text-xl">Empower your applications with the next generation of AI agents</p>
+            <a href="#advantages" class="mt-6 inline-block px-6 py-3 bg-green-500 text-white rounded-full transition duration-300 hover:bg-green-600 hover:shadow-lg transform hover:-translate-y-1">
+                <i class="fas fa-chevron-down mr-2"></i>Discover the Advantage
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="container mx-auto py-20">
+        <h2 class="text-4xl font-bold text-center mb-10 glow">Key Features</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card p-6 h-full flex flex-col justify-between">
+                        <i class="fas fa-feather-alt text-4xl text-green-400 mb-4"></i>
+                        <h3 class="font-semibold text-xl mb-2">Lightweight and Efficient</h3>
+                        <p>LaGent ensures your applications run smoothly without unnecessary overhead.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card p-6 h-full flex flex-col justify-between">
+                        <i class="fas fa-cubes text-4xl text-green-400 mb-4"></i>
+                        <h3 class="font-semibold text-xl mb-2">Modular Design</h3>
+                        <p>Easily customize and extend the framework's capabilities to fit your needs.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card p-6 h-full flex flex-col justify-between">
+                        <i class="fas fa-puzzle-piece text-4xl text-green-400 mb-4"></i>
+                        <h3 class="font-semibold text-xl mb-2">Pre-built Templates</h3>
+                        <p>Speed up development with a range of pre-built agent templates offered.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card p-6 h-full flex flex-col justify-between">
+                        <i class="fas fa-users text-4xl text-green-400 mb-4"></i>
+                        <h3 class="font-semibold text-xl mb-2">Community-Driven</h3>
+                        <p>Benefit from contributions, documentation, and shared knowledge within the community.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card p-6 h-full flex flex-col justify-between">
+                        <i class="fas fa-plug text-4xl text-green-400 mb-4"></i>
+                        <h3 class="font-semibold text-xl mb-2">Integration Ready</h3>
+                        <p>Versatile for many applications, easily integrated with various APIs and services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="advantages" class="container mx-auto py-20">
+        <h2 class="text-4xl font-bold text-center mb-10 glow">Why LaGent is a Game-Changer</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card p-6">
+                <i class="fas fa-bolt text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Enhanced Performance</h3>
+                <p>LaGent's optimized architecture allows for faster processing and reduced latency compared to traditional LLM implementations.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-brain text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Advanced Context Understanding</h3>
+                <p>Our proprietary algorithms enable LaGent to maintain and utilize context more effectively, resulting in more coherent and relevant responses.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-cogs text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Seamless Customization</h3>
+                <p>LaGent's modular design allows for easy fine-tuning and adaptation to specific domains or use cases without compromising performance.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-lock text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Enhanced Security</h3>
+                <p>Built-in security features protect against common vulnerabilities, ensuring your AI agents are safe and reliable.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-chart-line text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Scalability</h3>
+                <p>LaGent is designed to scale effortlessly, from small projects to enterprise-level applications, without compromising on performance.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-code-branch text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Version Control</h3>
+                <p>Integrated version control allows for easy tracking of changes and rollbacks, enhancing collaboration and maintainability.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-database text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Efficient Resource Management</h3>
+                <p>LaGent optimizes resource utilization, allowing for more efficient use of computational power and memory.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-sitemap text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Multi-Agent Coordination</h3>
+                <p>LaGent enables seamless coordination between multiple AI agents, opening up possibilities for complex, distributed AI systems.</p>
+            </div>
+            <div class="card p-6">
+                <i class="fas fa-magic text-4xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Continuous Learning</h3>
+                <p>With built-in mechanisms for continuous learning, LaGent agents can improve over time, adapting to new data and scenarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="getting-started" class="container mx-auto py-20">
+        <h2 class="text-4xl font-bold text-center mb-10 glow">Getting Started with LaGent</h2>
+        <p class="text-center mb-10">Follow these simple steps to set up your first agent.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="card p-6">
+                <h3 class="font-semibold text-xl mb-4">
+                    <i class="fas fa-file-import mr-2 text-green-400"></i>Step 1: Import Libraries
+                </h3>
+                <pre><code>from lagent import Agent</code></pre>
+            </div>
+            <div class="card p-6">
+                <h3 class="font-semibold text-xl mb-4">
+                    <i class="fas fa-robot mr-2 text-green-400"></i>Step 2: Initialize the Agent
+                </h3>
+                <pre><code>my_agent = Agent(name="ChatBot", model="gpt-3.5-turbo")</code></pre>
+            </div>
+            <div class="card p-6">
+                <h3 class="font-semibold text-xl mb-4">
+                    <i class="fas fa-comments mr-2 text-green-400"></i>Step 3: Define a Conversation Loop
+                </h3>
+                <pre><code>print("Welcome to ChatBot!")
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == 'exit':
+        print("ChatBot: Goodbye!")
+        break
+    response = my_agent.respond(user_input)
+    print(f"ChatBot: {response}")</code></pre>
+            </div>
+            <div class="card p-6">
+                <h3 class="font-semibold text-xl mb-4">
+                    <i class="fas fa-play mr-2 text-green-400"></i>Step 4: Run Your Agent
+                </h3>
+                <pre><code>python my_agent.py</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="customization" class="container mx-auto py-20">
+        <h2 class="text-4xl font-bold text-center mb-10 glow">Customizing Your Agent</h2>
+        <p class="text-center mb-10">LaGent allows you to modify the agent's behavior extensively.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="card p-6">
+                <h3 class="font-semibold text-xl mb-4">
+                    <i class="fas fa-cog mr-2 text-green-400"></i>Adding Context
+                </h3>
+                <pre><code>my_agent = Agent(
+    name="ChatBot",
+    model="gpt-3.5" ).add_context(
+        
+    )
+    context=[
+        {"role": "system", "content": "You are a personal assistant."},
+        {"role": "user", "content": "How can I help you?"},
+        {"role": "assistant", "content": "You can ask me questions about programming, code, or anything else."},
+        {"role": "user", "content": "What's the weather like today?"},
+        {"role": "assistant", "content": "The weather is sunny with a high of 70 degrees Fahrenheit and a light breeze."},
+        {"role": "user", "content": "Can you write a hello world program in Python?"},
+        {"role": "assistant", "content": "Sure! Here's a simple Python program that prints 'Hello, World!' to the console:\n
